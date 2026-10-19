@@ -1,0 +1,22 @@
+- id: about
+  title: 연구소 소개
+  url: /about/intro/
+  children:
+    - { title: 연구소 개요, url: /about/intro/ }
+    - { title: 소장 인사말, url: /about/greeting/ }
+    - { title: 연구분야, url: /about/research/ }
+    - { title: 연혁, url: /about/history/ }
+    - { title: 연구인력, url: /about/members/ }
+    - { title: 오시는 길, url: /about/location/ }
+- id: research
+  title: 연구 업적
+  url: /research/publications/
+  children:
+    - { title: 연구논문, url: /research/publications/ }
+    - { title: 연구과제, url: /research/projects/ }
+- id: board
+  title: 게시판
+  url: /board/notice/
+  children:
+    - { title: 공지사항, url: /board/notice/ }
+    - { title: 연구소 일정, url: /board/seminar/ }

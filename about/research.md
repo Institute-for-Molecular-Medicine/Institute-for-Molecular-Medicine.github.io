@@ -1,0 +1,13 @@
+---
+layout: sub
+section: about
+title: 연구분야
+permalink: /about/research/
+---
+
+<div class="fields">
+<div class="field"><span class="num">01</span><h4>분자의학</h4><p class="en">Molecular Medicine</p><p>질병을 유발하는 분자 표적을 찾아내고 그 작용 기전을 연구하며, 이를 바탕으로 혁신적인 진단 방법과 치료법 개발에 집중하고 있습니다.</p></div>
+<div class="field"><span class="num">02</span><h4>분자면역</h4><p class="en">Molecular Immunology</p><p>면역 시스템을 조절하는 분자 표적을 발굴하고 그 기전을 연구하며, 면역 시스템을 활용하여 미충족 의료 수요 질환의 발병 기전을 밝히고 있습니다.</p></div>
+<div class="field"><span class="num">03</span><h4>분자영양</h4><p class="en">Molecular Nutrition</p><p>영양소의 소화, 흡수, 대사에 대한 분자 수준의 기초 연구를 수행하고, 대사 조절과 질환의 연관성을 연구합니다.</p></div>
+<div class="field"><span class="num">04</span><h4>중개연구</h4><p class="en">Translational Research</p><p>기초 연구를 통해 발견한 질병 표적에 대한 새로운 치료 방법을 개발하고, 이를 임상에 적용하기 위한 중개 연구를 추진하고 있습니다.</p></div>
+</div>

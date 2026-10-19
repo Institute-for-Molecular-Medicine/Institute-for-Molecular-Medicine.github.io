@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ site.description }}">
+{% if site.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#content">본문 바로가기</a>
+
+<div class="util">
+  <div class="wrap util-in">
+    <ul>
+      <li><a href="https://www.korea.ac.kr" target="_blank" rel="noopener">고려대학교</a></li>
+      <li><a href="https://library.korea.ac.kr" target="_blank" rel="noopener">도서관</a></li>
+      <li><a href="https://portal.korea.ac.kr" target="_blank" rel="noopener">KUPID</a></li>
+    </ul>
+  </div>
+</div>
+
+<header class="header">
+  <div class="wrap header-in">
+    <button class="menu-btn" type="button" aria-label="전체 메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a class="logo" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="" width="44" height="44">
+      <span class="logo-txt"><strong>{{ site.title }}</strong><em>{{ site.university }} {{ site.title_en }}</em></span>
+    </a>
+    <nav class="gnb" aria-label="주 메뉴">
+      <ul>
+        {% for m in site.data.nav %}
+        <li class="{% if page.section == m.id %}on{% endif %}">
+          <a href="{{ m.url | relative_url }}">{{ m.title }}</a>
+          <ul class="sub">
+            {% for c in m.children %}<li><a href="{{ c.url | relative_url }}">{{ c.title }}</a></li>{% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+{{ content }}
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <img class="footer-logo" src="{{ '/assets/img/logo-white.svg' | relative_url }}" alt="" width="48" height="48">
+    <div>
+      <p class="footer-name">{{ site.title }} <span>{{ site.title_en }}</span></p>
+      <p>[{{ site.zipcode }}] {{ site.address }}</p>
+      <p>TEL : {{ site.phone }} <span class="bar"></span> E-mail : <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p class="copy"><a href="https://www.korea.ac.kr/ko/590/subview.do" target="_blank" rel="noopener"><strong>개인정보처리방침</strong></a><br>Copyright &copy; {{ site.time | date: "%Y" }} {{ site.university }} {{ site.title_en }}. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

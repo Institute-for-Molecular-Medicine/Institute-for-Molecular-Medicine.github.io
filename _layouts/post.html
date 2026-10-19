@@ -1,0 +1,23 @@
+---
+layout: sub
+---
+<div class="post">
+  <div class="post-head">
+    <h4>{{ page.title }}</h4>
+    <dl class="post-meta">
+      <dt>작성일</dt><dd>{{ page.date | date: "%Y.%m.%d" }}</dd>
+      {% if page.event_date %}<dt>일시</dt><dd>{{ page.event_date | date: "%Y.%m.%d" }}{% if page.time %} {{ page.time }}{% endif %}</dd>{% endif %}
+      {% if page.speaker %}<dt>연사</dt><dd>{{ page.speaker }}{% if page.affiliation %} ({{ page.affiliation }}){% endif %}</dd>{% endif %}
+      {% if page.venue %}<dt>장소</dt><dd>{{ page.venue }}</dd>{% endif %}
+    </dl>
+  </div>
+  <div class="post-body">
+{{ content }}
+  </div>
+  {% if page.attachment %}
+  <p class="post-file">첨부파일 <a href="{{ page.attachment | relative_url }}" download>{{ page.attachment | split: "/" | last }}</a></p>
+  {% endif %}
+  <div class="post-foot">
+    <a class="btn" href="{{ '/board/' | append: page.board | append: '/' | relative_url }}">목록</a>
+  </div>
+</div>

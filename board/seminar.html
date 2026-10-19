@@ -1,0 +1,25 @@
+---
+layout: sub
+section: board
+title: 연구소 일정
+permalink: /board/seminar/
+---
+<div class="board-tools">
+  <p class="total">전체 <strong class="cnt">0</strong>건</p>
+  <form class="search" role="search" onsubmit="return false">
+    <label class="sr" for="q">검색어</label>
+    <input id="q" type="search" placeholder="검색어를 입력하세요">
+    <button type="submit" class="btn">검색</button>
+  </form>
+</div>
+<table class="board-table" data-paged="10">
+  <thead><tr><th class="c-no">번호</th><th>제목</th><th class="c-date">일시</th></tr></thead>
+  <tbody>
+    {% assign items = site.seminars | sort: "event_date" | reverse %}
+    {% for p in items %}
+    <tr><td class="c-no">{{ forloop.rindex }}</td><td class="c-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></td><td class="c-date">{{ p.event_date | date: "%Y.%m.%d" }}</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+<p class="board-empty" hidden>게시물이 없습니다.</p>
+<nav class="paging" aria-label="페이지"></nav>

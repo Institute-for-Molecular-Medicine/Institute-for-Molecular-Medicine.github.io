@@ -1,0 +1,31 @@
+---
+layout: default
+---
+{% for m in site.data.nav %}{% if m.id == page.section %}{% assign sec = m %}{% endif %}{% endfor %}
+<section class="sub-visual">
+  <div class="wrap">
+    <p class="sv-en">{{ site.title_en }}</p>
+    <h2>{{ sec.title }}</h2>
+  </div>
+</section>
+
+<div class="wrap sub-body">
+  <aside class="lnb">
+    <h2>{{ sec.title }}</h2>
+    <ul>
+      {% for c in sec.children %}
+      <li{% if page.url contains c.url %} class="on"{% endif %}><a href="{{ c.url | relative_url }}">{{ c.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </aside>
+  <article class="sub-content">
+    <div class="sub-head">
+      {% if page.board_name %}{% assign ptitle = page.board_name %}{% else %}{% assign ptitle = page.title %}{% endif %}
+      <h3>{{ ptitle }}</h3>
+      <p class="crumb">HOME <span>&gt;</span> {{ sec.title }} <span>&gt;</span> {{ ptitle }}</p>
+    </div>
+    <div class="doc">
+{{ content }}
+    </div>
+  </article>
+</div>

@@ -1,0 +1,40 @@
+# 사이트 기본 정보 (여기만 고치면 전체에 반영됩니다)
+title: 고려대학교 분자의학연구소
+title_en: Institute of Molecular Medicine
+university: Korea University
+description: 고려대학교 분자의학연구소 (Institute of Molecular Medicine) 홈페이지
+
+address: 서울특별시 성북구 고려대로 73 고려대학교 문숙의학관 3층
+zipcode: "02841"
+phone: 02-2286-1181
+email: yyb77@korea.ac.kr
+
+# 시안 단계: 검색엔진 노출 차단. 정식 공개할 때 false 로 바꾸세요
+noindex: true
+
+# 도메인 연결 전에는 비워 둡니다
+url: ""
+baseurl: ""
+
+lang: ko
+timezone: Asia/Seoul
+markdown: kramdown
+
+collections:
+  notices:
+    output: true
+    permalink: /board/notice/:year:month:day-:title/
+  seminars:
+    output: true
+    permalink: /board/seminar/:year:month:day-:title/
+
+defaults:
+  - scope: { path: "", type: notices }
+    values: { layout: post, section: board, board: notice, board_name: 공지사항 }
+  - scope: { path: "", type: seminars }
+    values: { layout: post, section: board, board: seminar, board_name: 연구소 일정 }
+
+exclude:
+  - README.md
+  - preview_build.py
+  - .pages.yml

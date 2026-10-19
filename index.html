@@ -1,0 +1,64 @@
+---
+layout: default
+---
+<section class="hero" aria-label="메인 비주얼">
+  <div class="slides">
+    <div class="slide on" style="background-image:url('{{ '/assets/img/hero1.svg' | relative_url }}')"></div>
+    <div class="slide" style="background-image:url('{{ '/assets/img/hero2.svg' | relative_url }}')"></div>
+    <div class="slide" style="background-image:url('{{ '/assets/img/hero3.svg' | relative_url }}')"></div>
+  </div>
+  <div class="hero-box">
+    <h2>{{ site.title }}</h2>
+    <i></i>
+    <p>{{ site.title_en }}</p>
+  </div>
+  <div class="dots" role="tablist"><button class="on" aria-label="1번 슬라이드"></button><button aria-label="2번 슬라이드"></button><button aria-label="3번 슬라이드"></button></div>
+</section>
+
+<section class="boards wrap">
+  <div class="board-box">
+    <div class="bb-head"><h3>공지사항</h3><a class="more" href="{{ '/board/notice/' | relative_url }}" aria-label="공지사항 더보기">+</a></div>
+    <ul class="bb-list">
+      {% assign notices = site.notices | sort: "date" | reverse %}
+      {% for p in notices limit: 5 %}
+      <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a><span>{{ p.date | date: "%Y.%m.%d" }}</span></li>
+      {% else %}
+      <li class="empty">등록된 공지사항이 없습니다.</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="board-box">
+    <div class="bb-head"><h3>연구소 일정</h3><a class="more" href="{{ '/board/seminar/' | relative_url }}" aria-label="연구소 일정 더보기">+</a></div>
+    <ul class="bb-list">
+      {% assign seminars = site.seminars | sort: "event_date" | reverse %}
+      {% for p in seminars limit: 5 %}
+      <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a><span>{{ p.event_date | date: "%Y.%m.%d" }}</span></li>
+      {% else %}
+      <li class="empty">등록된 일정이 없습니다.</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="cards-wrap">
+  <div class="wrap cards">
+    <a class="card c1" href="{{ '/about/intro/' | relative_url }}#purpose"><strong>설립목적</strong><span>More +</span></a>
+    <a class="card c2" href="{{ '/about/intro/' | relative_url }}#rules"><strong>연구소 내규</strong><span>More +</span></a>
+    <a class="card c3" href="{{ '/about/intro/' | relative_url }}#org"><strong>조직현황</strong><span>More +</span></a>
+  </div>
+</section>
+
+<section class="quick wrap">
+  <h3>QUICK MENU</h3>
+  <div class="quick-row">
+    <button class="q-prev" type="button" aria-label="이전">&lsaquo;</button>
+    <div class="q-track">
+      <ul>
+        {% for q in site.data.quicklinks %}
+        <li><a href="{{ q.url }}" target="_blank" rel="noopener"><strong>{{ q.title }}</strong><em>{{ q.sub }}</em></a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <button class="q-next" type="button" aria-label="다음">&rsaquo;</button>
+  </div>
+</section>

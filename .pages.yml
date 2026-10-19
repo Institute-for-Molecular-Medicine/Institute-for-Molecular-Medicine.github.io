@@ -1,0 +1,38 @@
+# Pages CMS (https://pagescms.org) 관리자 화면 설정
+media:
+  input: assets/uploads
+  output: /assets/uploads
+
+content:
+  - name: notices
+    label: 공지사항
+    type: collection
+    path: _notices
+    filename: "{year}-{month}-{day}-notice-{hour}{minute}{second}.md"
+    view:
+      fields: [title, date]
+      primary: title
+    fields:
+      - { name: title, label: 제목, type: string, required: true }
+      - { name: date, label: 작성일, type: date, required: true }
+      - { name: attachment, label: 첨부파일, type: file }
+      - { name: body, label: 본문, type: rich-text }
+
+  - name: seminars
+    label: 연구소 일정
+    type: collection
+    path: _seminars
+    filename: "{year}-{month}-{day}-seminar-{hour}{minute}{second}.md"
+    view:
+      fields: [title, event_date, date]
+      primary: title
+    fields:
+      - { name: title, label: 제목, type: string, required: true }
+      - { name: date, label: 작성일, type: date, required: true }
+      - { name: event_date, label: 행사일, type: date, required: true }
+      - { name: time, label: 시간, type: string, description: "예: 오후 5시" }
+      - { name: speaker, label: 연사, type: string, description: "예: 홍길동 교수" }
+      - { name: affiliation, label: 소속, type: string }
+      - { name: venue, label: 장소, type: string, description: "예: 문숙의학관 3층 세미나실" }
+      - { name: attachment, label: 첨부파일 (포스터 등), type: file }
+      - { name: body, label: 본문, type: rich-text }
