@@ -1,0 +1,68 @@
+groups:
+- title: 연구소장
+  people:
+  - name: 박석인
+    degree: 이학박사
+    affiliation: 고려대학교 의과대학 생화학교실
+- title: 고문
+  people:
+  - name: 황우익
+    degree: 이학박사
+    affiliation: 명예교수
+  - name: 박길홍
+    degree: 의학박사
+    affiliation: 명예교수
+  - name: 손정원
+    degree: 의학박사
+    affiliation: ''
+  - name: 박윤규
+    degree: 의학박사
+    affiliation: ''
+  - name: 김명곤
+    degree: 의학박사
+    affiliation: ''
+  - name: 이경미
+    degree: 이학박사
+    affiliation: ''
+- title: 연구부장
+  people:
+  - name: 지종대
+    degree: 의학박사
+    affiliation: ''
+  - name: 김태우
+    degree: 이학박사
+    affiliation: ''
+  - name: 김현경
+    degree: 이학박사
+    affiliation: ''
+- title: 행정실장
+  people:
+  - name: 남기훈
+    degree: 이학박사
+    affiliation: ''
+- title: 운영위원
+  people:
+  - name: 김윤환
+    degree: 의학박사
+    affiliation: 영상의학과
+  - name: 이기열
+    degree: 의학박사
+    affiliation: 영상의학과
+  - name: 황윤경
+    degree: 이학박사
+    affiliation: 수원여자대학교
+- title: 겸임교수
+  people:
+  - name: Tae K. Kim
+    degree: M.D.
+    affiliation: Vanderbilt University School of Medicine
+  - name: 양웅모
+    degree: 한의학박사
+    affiliation: ''
+counts:
+- label: 연구교수
+  count: 11명
+- label: 연구원 (석사)
+  count: 6명
+- label: 연구보조원 (학사)
+  count: 31명

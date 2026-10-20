@@ -1,0 +1,19 @@
+---
+layout: sub
+---
+{% assign d = site.data.history %}
+<ul class="timeline">
+  {% for e in d.events %}<li><span class="yr">{{ e.year }}</span><div><p>{{ e.text | newline_to_br }}</p></div></li>
+  {% endfor %}
+</ul>
+
+{% if d.directors.size > 0 %}
+<h4 class="h-bar">역대 연구소장</h4>
+<table>
+  <thead><tr><th>기간</th><th>연구소장</th></tr></thead>
+  <tbody>
+  {% for x in d.directors %}<tr><td>{{ x.period }}</td><td>{{ x.name }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}

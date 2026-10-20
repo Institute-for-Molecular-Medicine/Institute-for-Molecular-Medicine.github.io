@@ -1,0 +1,22 @@
+---
+layout: sub
+---
+{% assign d = site.data.members %}
+{% for g in d.groups %}
+<h4 class="h-bar">{{ g.title }}</h4>
+<div class="people">
+  {% for p in g.people %}<div class="person">{% if p.photo %}<img class="person-photo" src="{{ p.photo | relative_url }}" alt="{{ p.name }}">{% endif %}<strong>{{ p.name }}</strong>{% if p.degree %}<span>{{ p.degree }}</span>{% endif %}{% if p.affiliation %}<em>{{ p.affiliation }}</em>{% endif %}</div>
+  {% endfor %}
+</div>
+{% endfor %}
+
+{% if d.counts.size > 0 %}
+<h4 class="h-bar">연구원</h4>
+<table>
+  <thead><tr><th>구분</th><th>인원</th></tr></thead>
+  <tbody>
+  {% for c in d.counts %}<tr><td>{{ c.label }}</td><td>{{ c.count }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}

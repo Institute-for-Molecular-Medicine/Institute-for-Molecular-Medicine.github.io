@@ -1,0 +1,24 @@
+events:
+- year: '2026'
+  text: 분자의학연구소(Institute of Molecular Medicine)로 개칭
+- year: '2000'
+  text: 10. 24. 한국분자의학영양연구소로 개칭
+- year: '1980'
+  text: 05. 07. 한국영양문제연구소 설립
+directors:
+- period: 1980 ~ 1987
+  name: 주진순
+- period: 1987 ~ 1999
+  name: 황우익
+- period: 1999 ~ 2005
+  name: 박길홍
+- period: 2005 ~ 2009
+  name: 손정원
+- period: 2009 ~ 2011
+  name: 박윤규
+- period: ''
+  name: 김명곤
+- period: ''
+  name: 이경미
+- period: 현재
+  name: 박석인

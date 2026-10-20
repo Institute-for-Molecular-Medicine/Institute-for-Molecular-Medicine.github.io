@@ -1,0 +1,38 @@
+---
+layout: sub
+---
+{% assign d = site.data.intro %}
+<div class="lead-box">
+<p class="lead-en">{{ site.title_en }}</p>
+<p>{{ d.lead | newline_to_br }}</p>
+</div>
+
+<h4 id="purpose" class="h-bar">설립목적</h4>
+<ul>
+  {% for x in d.purposes %}<li>{{ x }}</li>
+  {% endfor %}
+</ul>
+
+<h4 id="org" class="h-bar">조직현황</h4>
+<div class="org">
+  <div class="org-top">연구소장</div>
+  <div class="org-line"></div>
+  <div class="org-side"><span>고문</span><span>운영위원회</span></div>
+  <div class="org-line"></div>
+  <div class="org-row">
+    <div>분자의학부</div>
+    <div>분자면역부</div>
+    <div>분자영양부</div>
+    <div>행정실</div>
+  </div>
+</div>
+
+<h4 id="rules" class="h-bar">연구소 내규</h4>
+<table>
+  <thead><tr><th>구분</th><th>주요 내용</th></tr></thead>
+  <tbody>
+  {% for r in d.rules %}<tr><td>{{ r.item }}</td><td>{{ r.content | newline_to_br }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% if d.rules_note %}<p class="note">{{ d.rules_note }}</p>{% endif %}

@@ -38,3 +38,101 @@ content:
       - { name: poster, label: "이미지 (선택)", type: image, description: "포스터나 안내 그림이 있으면 넣으세요. 글 맨 위에 크게 표시됩니다." }
       - { name: body, label: "본문", type: rich-text }
       - { name: attachment, label: "첨부파일 (선택)", type: file }
+
+  # 연구소 소개 페이지들 (글자만 바꾸면 화면 모양은 그대로 유지됩니다)
+  - name: page-intro
+    label: "소개: 연구소 개요"
+    type: file
+    path: _data/intro.yml
+    format: yaml
+    fields:
+      - { name: lead, label: "소개 문장", type: text }
+      - { name: purposes, label: "설립목적", type: string, list: true, description: "항목 하나에 한 문장씩 적으세요." }
+      - name: rules
+        label: "연구소 내규"
+        type: object
+        list: true
+        fields:
+          - { name: item, label: "구분", type: string }
+          - { name: content, label: "주요 내용", type: text }
+      - { name: rules_note, label: "내규 아래 안내 문구", type: string }
+
+  - name: page-greeting
+    label: "소개: 소장 인사말"
+    type: file
+    path: _data/greeting.yml
+    format: yaml
+    fields:
+      - { name: photo, label: "소장 사진", type: image, description: "세로 사진을 권장합니다." }
+      - { name: heading, label: "첫 문장 (크게 표시)", type: string }
+      - { name: message, label: "인사말 본문", type: rich-text }
+      - { name: sign_title, label: "서명 직함", type: string }
+      - { name: name, label: "소장 이름", type: string }
+
+  - name: page-research
+    label: "소개: 연구분야"
+    type: file
+    path: _data/research.yml
+    format: yaml
+    fields:
+      - name: fields
+        label: "연구분야"
+        type: object
+        list: true
+        fields:
+          - { name: title, label: "분야명", type: string }
+          - { name: en, label: "영문명", type: string }
+          - { name: desc, label: "설명", type: text }
+
+  - name: page-history
+    label: "소개: 연혁"
+    type: file
+    path: _data/history.yml
+    format: yaml
+    fields:
+      - name: events
+        label: "연혁 (최근 것이 위로)"
+        type: object
+        list: true
+        fields:
+          - { name: year, label: "연도", type: string }
+          - { name: text, label: "내용", type: text, description: "예: 10. 24. 한국분자의학영양연구소로 개칭" }
+      - name: directors
+        label: "역대 연구소장"
+        type: object
+        list: true
+        fields:
+          - { name: period, label: "기간", type: string, description: "예: 2011 ~ 2013" }
+          - { name: name, label: "이름", type: string }
+
+  - name: page-members
+    label: "소개: 연구인력"
+    type: file
+    path: _data/members.yml
+    format: yaml
+    fields:
+      - name: groups
+        label: "구분"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - { name: title, label: "구분 이름", type: string, description: "예: 고문, 연구부장, 운영위원" }
+          - name: people
+            label: "사람"
+            type: object
+            list: true
+            fields:
+              - { name: name, label: "이름", type: string }
+              - { name: degree, label: "학위", type: string, description: "예: 이학박사" }
+              - { name: affiliation, label: "소속 또는 직위", type: string }
+              - { name: photo, label: "사진 (선택)", type: image }
+      - name: counts
+        label: "연구원 인원"
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "구분", type: string }
+          - { name: count, label: "인원", type: string, description: "예: 11명" }

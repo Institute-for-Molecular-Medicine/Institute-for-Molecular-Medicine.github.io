@@ -286,3 +286,4 @@ ul,ol{list-style:none}
   .links a{height:70px}
   .links strong{font-size:14px}
 }
+.person-photo{width:100%;aspect-ratio:3/4;object-fit:cover;margin-bottom:10px;background:#f3f3f3}
