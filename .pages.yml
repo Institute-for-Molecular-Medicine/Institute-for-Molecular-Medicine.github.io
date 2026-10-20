@@ -150,3 +150,28 @@ content:
             fields:
               - { name: name, label: "이름", type: string }
               - { name: note, label: "비고 (선택)", type: string, description: "예: 박석인 교수 연구실" }
+
+  - name: page-industry
+    label: "연구업적: 산학 협력"
+    type: file
+    path: _data/industry.yml
+    format: yaml
+    fields:
+      - { name: intro, label: "소개 문장", type: text }
+      - name: companies
+        label: "기업"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - { name: name, label: "기업명", type: string }
+          - { name: en, label: "영문명", type: string, description: "첫 글자가 원 안의 표시로 쓰입니다." }
+          - { name: url, label: "홈페이지 주소", type: string }
+          - { name: tagline, label: "한 줄 소개", type: string }
+          - { name: desc, label: "회사 소개", type: text }
+          - { name: keywords, label: "핵심 키워드", type: string, list: true }
+          - { name: person, label: "연구소 참여 교수", type: string, description: "예: 남기훈 교수" }
+          - { name: role, label: "역할", type: string, description: "예: 공동창업자 겸 CTO" }
+          - { name: color, label: "대표 색상", type: string, description: "예: #009eb1" }

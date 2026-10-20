@@ -13,6 +13,7 @@
   url: /research/publications/
   children:
     - { title: 연구논문, url: /research/publications/ }
+    - { title: 산학 협력, url: /research/industry/ }
 - id: board
   title: 게시판
   url: /board/notice/

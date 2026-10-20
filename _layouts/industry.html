@@ -1,0 +1,25 @@
+---
+layout: sub
+---
+{% assign d = site.data.industry %}
+{% if d.intro and d.intro != "" %}<p class="ind-intro">{{ d.intro | newline_to_br }}</p>{% endif %}
+<div class="companies">
+  {% for c in d.companies %}
+  {% assign col = c.color | default: "#8b0029" %}
+  <article class="company" style="--accent:{{ col }}">
+    <header class="co-head">
+      <span class="co-mark" aria-hidden="true">{{ c.en | slice: 0 }}</span>
+      <div class="co-title">
+        <h4>{{ c.name }} <span>{{ c.en }}</span></h4>
+        {% if c.tagline and c.tagline != "" %}<p class="co-tag">{{ c.tagline }}</p>{% endif %}
+      </div>
+    </header>
+    <p class="co-desc">{{ c.desc | newline_to_br }}</p>
+    {% if c.keywords.size > 0 %}<ul class="co-keys">{% for k in c.keywords %}<li>{{ k }}</li>{% endfor %}</ul>{% endif %}
+    <footer class="co-foot">
+      {% if c.person and c.person != "" %}<div class="co-person"><strong>{{ c.person }}</strong><span>{{ c.role }}</span></div>{% endif %}
+      {% if c.url and c.url != "" %}<a class="co-link" href="{{ c.url }}" target="_blank" rel="noopener">홈페이지 바로가기<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3h8v8h-1.6V5.7l-7.3 7.3-1.1-1.1 7.3-7.3H5z"/></svg></a>{% endif %}
+    </footer>
+  </article>
+  {% endfor %}
+</div>

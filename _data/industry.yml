@@ -1,0 +1,26 @@
+intro: 연구소 교수진의 연구를 바탕으로 설립된 기업들과 함께 기초 연구의 성과를 실제 진단과 치료 기술로 연결하고 있습니다.
+companies:
+- name: 시프트바이오
+  en: ShiftBio
+  url: https://shiftbio.net
+  color: '#009eb1'
+  tagline: 나노베지클 기반 세포·유전자 치료 플랫폼
+  desc: 세포 유래 나노베지클(nanovesicle)을 활용한 차세대 세포·유전자 치료 기술을 개발합니다. 독자적인 나노베지클 분류 모티프(NSM) 기술로 치료 단백질을 베지클 표면에 효율적으로 제시하고 세포 안으로 전달하여, 그동안 표적하기 어려웠던 질환에 대한 새로운 치료 가능성을 열어 가고 있습니다.
+  keywords:
+  - Nanovesicle
+  - Cell & Gene Therapy
+  - NSM Platform
+  person: 남기훈 교수
+  role: 공동창업자 겸 CTO
+- name: 에이뮨링크
+  en: AImmuneLink
+  url: https://www.aimmunelink.com
+  color: '#f7941e'
+  tagline: 질량세포분석 기반 정밀면역 분석
+  desc: 질량세포분석(mass cytometry) 플랫폼으로 단일세포 수준의 정밀 면역 분석과 맞춤형 면역 건강관리 서비스를 제공합니다. 면역 빅데이터와 AI로 구축한 면역 디지털 트윈(Immune Digital Twin) 기술을 바탕으로 감염, 백신, 자가면역질환 관련 면역 검사와 면역 노화 측정 서비스를 개발하고 있습니다.
+  keywords:
+  - Mass Cytometry
+  - Immune Digital Twin
+  - Precision Immunology
+  person: 박석인 교수
+  role: 공동창업자 겸 CSO
