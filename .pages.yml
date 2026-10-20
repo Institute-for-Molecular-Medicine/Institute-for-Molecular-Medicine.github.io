@@ -4,6 +4,26 @@ media:
   output: /assets/uploads
 
 content:
+  - name: seminars
+    label: 연구소 일정 (세미나)
+    type: collection
+    path: _seminars
+    filename: "{year}-{month}-{day}-seminar-{hour}{minute}{second}.md"
+    view:
+      fields: [title, event_date]
+      primary: title
+    fields:
+      - { name: title, label: "제목", type: string, required: true, description: "예: 연구소 초청 세미나 (2026년 11월 3일) 홍길동 교수" }
+      - { name: poster, label: "포스터 이미지", type: image, description: "포스터 그림 파일을 여기에 끌어다 놓으세요. 글 맨 위에 크게 표시됩니다." }
+      - { name: event_date, label: "세미나 날짜", type: date, required: true }
+      - { name: time, label: "시간", type: string, description: "예: 오후 5시" }
+      - { name: speaker, label: "연사", type: string, description: "예: 홍길동 교수" }
+      - { name: affiliation, label: "연사 소속", type: string }
+      - { name: venue, label: "장소", type: string, description: "예: 의학도서관 1층 교육실" }
+      - { name: date, label: "게시일", type: date, required: true, description: "오늘 날짜를 고르세요." }
+      - { name: attachment, label: "첨부파일 (선택)", type: file }
+      - { name: body, label: "본문 (선택)", type: rich-text }
+
   - name: notices
     label: 공지사항
     type: collection
@@ -13,26 +33,8 @@ content:
       fields: [title, date]
       primary: title
     fields:
-      - { name: title, label: 제목, type: string, required: true }
-      - { name: date, label: 작성일, type: date, required: true }
-      - { name: attachment, label: 첨부파일, type: file }
-      - { name: body, label: 본문, type: rich-text }
-
-  - name: seminars
-    label: 연구소 일정
-    type: collection
-    path: _seminars
-    filename: "{year}-{month}-{day}-seminar-{hour}{minute}{second}.md"
-    view:
-      fields: [title, event_date, date]
-      primary: title
-    fields:
-      - { name: title, label: 제목, type: string, required: true }
-      - { name: date, label: 작성일, type: date, required: true }
-      - { name: event_date, label: 행사일, type: date, required: true }
-      - { name: time, label: 시간, type: string, description: "예: 오후 5시" }
-      - { name: speaker, label: 연사, type: string, description: "예: 홍길동 교수" }
-      - { name: affiliation, label: 소속, type: string }
-      - { name: venue, label: 장소, type: string, description: "예: 문숙의학관 3층 세미나실" }
-      - { name: attachment, label: 첨부파일 (포스터 등), type: file }
-      - { name: body, label: 본문, type: rich-text }
+      - { name: title, label: "제목", type: string, required: true }
+      - { name: date, label: "게시일", type: date, required: true, description: "오늘 날짜를 고르세요." }
+      - { name: poster, label: "이미지 (선택)", type: image, description: "포스터나 안내 그림이 있으면 넣으세요. 글 맨 위에 크게 표시됩니다." }
+      - { name: body, label: "본문", type: rich-text }
+      - { name: attachment, label: "첨부파일 (선택)", type: file }

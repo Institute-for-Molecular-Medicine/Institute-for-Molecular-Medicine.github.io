@@ -40,25 +40,12 @@ layout: default
   </div>
 </section>
 
-<section class="cards-wrap">
-  <div class="wrap cards">
-    <a class="card c1" href="{{ '/about/intro/' | relative_url }}#purpose"><strong>설립목적</strong><span>More +</span></a>
-    <a class="card c2" href="{{ '/about/intro/' | relative_url }}#rules"><strong>연구소 내규</strong><span>More +</span></a>
-    <a class="card c3" href="{{ '/about/intro/' | relative_url }}#org"><strong>조직현황</strong><span>More +</span></a>
-  </div>
-</section>
-
-<section class="quick wrap">
-  <h3>QUICK MENU</h3>
-  <div class="quick-row">
-    <button class="q-prev" type="button" aria-label="이전">&lsaquo;</button>
-    <div class="q-track">
-      <ul>
-        {% for q in site.data.quicklinks %}
-        <li><a href="{{ q.url }}" target="_blank" rel="noopener"><strong>{{ q.title }}</strong><em>{{ q.sub }}</em></a></li>
-        {% endfor %}
-      </ul>
-    </div>
-    <button class="q-next" type="button" aria-label="다음">&rsaquo;</button>
+<section class="links-band">
+  <div class="wrap">
+    <ul class="links">
+      {% for q in site.data.quicklinks %}
+      <li><a href="{{ q.url }}" target="_blank" rel="noopener"><strong>{{ q.title }}</strong><em>{{ q.sub }}</em></a></li>
+      {% endfor %}
+    </ul>
   </div>
 </section>
