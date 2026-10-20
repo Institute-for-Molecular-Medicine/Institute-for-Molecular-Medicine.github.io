@@ -49,7 +49,15 @@ groups:
         url: http://www.wmyanglab.com
 staff:
   - label: 연구교수
-    count: "11"
+    people:
+      - name: 강아람, Ph.D.
+        note: 박석인 교수 연구실
+      - name: 한아름, Ph.D.
+        note: 박석인 교수 연구실
   - label: 연구원
-    count: "6"
+    people:
+      - {}
   - label: 직원
+    people:
+      - name: 유영빈
+        note: 주임 실험기사
