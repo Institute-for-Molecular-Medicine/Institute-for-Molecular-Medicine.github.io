@@ -47,13 +47,13 @@ groups:
         affiliation: 경희대학교 한의과대학 교수
         url: http://www.wmyanglab.com
 staff:
-  - label: 연구교수
+  - label: 연구강사 및 연구교수
     people:
       - name: 강아람, Ph.D.
         note: 박석인 교수 연구실
       - name: 한아름, M.D., Ph.D.
         note: 박석인 교수 연구실
-  - label: 연구원
+  - label: 연구원 및 연구조원
     people:
       - {}
   - label: 직원
