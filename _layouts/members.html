@@ -5,7 +5,7 @@ layout: sub
 {% for g in d.groups %}
 <h4 class="h-bar">{{ g.title }}</h4>
 <div class="people">
-  {% for p in g.people %}<div class="person">{% if p.photo and p.photo != "" %}<img class="person-photo" src="{{ p.photo | relative_url }}" alt="{{ p.name }}">{% endif %}{% if p.url and p.url != "" %}<a class="pname" href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }} <span class="ext">홈페이지</span></a>{% else %}<strong>{{ p.name }}</strong>{% endif %}{% if p.degree and p.degree != "" %}<span>{{ p.degree }}</span>{% endif %}{% if p.affiliation and p.affiliation != "" %}<em>{{ p.affiliation }}</em>{% endif %}</div>
+  {% for p in g.people %}<div class="person">{% if p.photo and p.photo != "" %}<img class="person-photo" src="{{ p.photo | relative_url }}" alt="{{ p.name }}">{% endif %}{% if p.url and p.url != "" %}<a class="pname" href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}<svg class="home-ico" viewBox="0 0 16 16" aria-label="홈페이지" role="img"><path d="M8 1.6 1.2 7.4l.9 1 1.1-.9V14h3.6v-4h2.4v4h3.6V7.5l1.1.9.9-1z"/></svg></a>{% else %}<strong>{{ p.name }}</strong>{% endif %}{% if p.degree and p.degree != "" %}<span>{{ p.degree }}</span>{% endif %}{% if p.affiliation and p.affiliation != "" %}<em>{{ p.affiliation }}</em>{% endif %}</div>
   {% endfor %}
 </div>
 {% endfor %}

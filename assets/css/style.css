@@ -346,3 +346,6 @@ ul,ol{list-style:none}
 .links strong{word-break:keep-all;line-height:1.35}
 .links a{padding:0 10px}
 .links em{line-height:1.4}
+.person .pname{display:inline-flex;align-items:center;gap:5px}
+.home-ico{width:13px;height:13px;fill:var(--crimson);opacity:.75;flex:none}
+.person .pname:hover .home-ico{opacity:1}
