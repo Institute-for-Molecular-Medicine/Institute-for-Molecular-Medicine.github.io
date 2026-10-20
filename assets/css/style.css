@@ -343,3 +343,5 @@ ul,ol{list-style:none}
 .field h4{font-size:20px}
 .person{min-height:76px;padding:14px 16px}
 .person em{line-height:1.45}
+.links strong{word-break:keep-all;line-height:1.35}
+.links a{padding:0 10px}
