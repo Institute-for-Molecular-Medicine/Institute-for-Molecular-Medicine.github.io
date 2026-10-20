@@ -3,7 +3,7 @@ layout: sub
 ---
 {% assign d = site.data.greeting %}
 <div class="greeting">
-  <div class="greet-photo">{% if d.photo %}<img src="{{ d.photo | relative_url }}" alt="연구소장 사진">{% endif %}</div>
+  <div class="greet-photo">{% if d.photo and d.photo != "" %}<img src="{{ d.photo | relative_url }}" alt="연구소장 사진">{% endif %}</div>
   <div class="greet-text">
     {% if d.heading %}<p class="greet-title">{{ d.heading }}</p>{% endif %}
     {{ d.message }}

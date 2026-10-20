@@ -5,18 +5,28 @@ layout: sub
 {% for g in d.groups %}
 <h4 class="h-bar">{{ g.title }}</h4>
 <div class="people">
-  {% for p in g.people %}<div class="person">{% if p.photo %}<img class="person-photo" src="{{ p.photo | relative_url }}" alt="{{ p.name }}">{% endif %}<strong>{{ p.name }}</strong>{% if p.degree %}<span>{{ p.degree }}</span>{% endif %}{% if p.affiliation %}<em>{{ p.affiliation }}</em>{% endif %}</div>
+  {% for p in g.people %}<div class="person">{% if p.photo and p.photo != "" %}<img class="person-photo" src="{{ p.photo | relative_url }}" alt="{{ p.name }}">{% endif %}{% if p.url and p.url != "" %}<a class="pname" href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }} <span class="ext">홈페이지</span></a>{% else %}<strong>{{ p.name }}</strong>{% endif %}{% if p.degree and p.degree != "" %}<span>{{ p.degree }}</span>{% endif %}{% if p.affiliation and p.affiliation != "" %}<em>{{ p.affiliation }}</em>{% endif %}</div>
   {% endfor %}
 </div>
 {% endfor %}
 
-{% if d.counts.size > 0 %}
-<h4 class="h-bar">연구원</h4>
-<table>
-  <thead><tr><th>구분</th><th>인원</th></tr></thead>
-  <tbody>
-  {% for c in d.counts %}<tr><td>{{ c.label }}</td><td>{{ c.count }}</td></tr>
+{% if d.staff.size > 0 %}
+<h4 class="h-bar">연구원 및 직원</h4>
+<div class="staff">
+  {% for s in d.staff %}
+  {% assign n = s.people.size %}
+  {% if s.count and s.count != "" %}{% assign cnt = s.count %}{% else %}{% assign cnt = n %}{% endif %}
+  <details class="staff-row">
+    <summary><span class="sl">{{ s.label }}</span><span class="sc"><b>{{ cnt }}</b>명</span><span class="sa">명단 보기</span></summary>
+    {% if n > 0 %}
+    <ul class="staff-list">
+      {% for p in s.people %}<li><strong>{{ p.name }}</strong>{% if p.note and p.note != "" %}<em>{{ p.note }}</em>{% endif %}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="note staff-empty">명단 준비 중입니다.</p>
+    {% endif %}
+  </details>
   {% endfor %}
-  </tbody>
-</table>
+</div>
 {% endif %}

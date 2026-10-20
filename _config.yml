@@ -1,8 +1,9 @@
 # 사이트 기본 정보 (여기만 고치면 전체에 반영됩니다)
 title: 고려대학교 분자의학연구소
-title_en: Institute of Molecular Medicine
+title_en: Institute for Molecular Medicine
+title_en_full: Institute for Molecular Medicine at Korea University
 university: Korea University
-description: 고려대학교 분자의학연구소 (Institute of Molecular Medicine) 홈페이지
+description: 고려대학교 분자의학연구소 (Institute for Molecular Medicine) 홈페이지
 
 address: 서울특별시 성북구 고려대로 73 고려대학교 문숙의학관 3층
 zipcode: "02841"

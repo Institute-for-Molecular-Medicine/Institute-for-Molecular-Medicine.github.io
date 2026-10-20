@@ -3,6 +3,6 @@ layout: sub
 ---
 <div class="fields">
   {% for f in site.data.research.fields %}
-  <div class="field"><span class="num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><h4>{{ f.title }}</h4>{% if f.en %}<p class="en">{{ f.en }}</p>{% endif %}<p>{{ f.desc | newline_to_br }}</p></div>
+  <div class="field"><span class="num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><h4>{{ f.title }}</h4>{% if f.en and f.en != "" %}<p class="en">{{ f.en }}</p>{% endif %}<p>{{ f.desc | newline_to_br }}</p></div>
   {% endfor %}
 </div>

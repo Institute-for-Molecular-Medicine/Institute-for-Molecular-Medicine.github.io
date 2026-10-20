@@ -47,7 +47,17 @@ content:
     format: yaml
     fields:
       - { name: lead, label: "소개 문장", type: text }
-      - { name: purposes, label: "설립목적", type: string, list: true, description: "항목 하나에 한 문장씩 적으세요." }
+      - { name: purpose, label: "설립목적", type: text }
+      - name: departments
+        label: "조직 (연구부)"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - { name: name, label: "연구부 이름", type: string }
+          - { name: desc, label: "분장 내용", type: text }
       - name: rules
         label: "연구소 내규"
         type: object
@@ -112,27 +122,41 @@ content:
     format: yaml
     fields:
       - name: groups
-        label: "구분"
+        label: "교수진 (구분별)"
         type: object
         list:
           collapsible:
             collapsed: true
             summary: "{title}"
         fields:
-          - { name: title, label: "구분 이름", type: string, description: "예: 고문, 연구부장, 운영위원" }
+          - { name: title, label: "구분 이름", type: string, description: "예: 고문, 참여교수, 겸임교수" }
           - name: people
-            label: "사람"
+            label: "교수"
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name}"
+            fields:
+              - { name: name, label: "이름", type: string }
+              - { name: degree, label: "학위", type: string, description: "예: 이학박사, M.D., Ph.D." }
+              - { name: affiliation, label: "소속 또는 직위", type: string }
+              - { name: url, label: "홈페이지 주소 (선택)", type: string, description: "https:// 로 시작하는 주소. 넣으면 이름을 눌러 이동할 수 있습니다." }
+              - { name: photo, label: "사진 (선택)", type: image }
+      - name: staff
+        label: "연구교수, 연구원, 직원"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - { name: label, label: "구분", type: string, description: "예: 연구교수" }
+          - { name: count, label: "인원 수 (선택)", type: string, description: "비워 두면 아래 명단의 사람 수가 자동으로 표시됩니다." }
+          - name: people
+            label: "명단"
             type: object
             list: true
             fields:
               - { name: name, label: "이름", type: string }
-              - { name: degree, label: "학위", type: string, description: "예: 이학박사" }
-              - { name: affiliation, label: "소속 또는 직위", type: string }
-              - { name: photo, label: "사진 (선택)", type: image }
-      - name: counts
-        label: "연구원 인원"
-        type: object
-        list: true
-        fields:
-          - { name: label, label: "구분", type: string }
-          - { name: count, label: "인원", type: string, description: "예: 11명" }
+              - { name: note, label: "비고 (선택)", type: string, description: "예: 박석인 교수 연구실" }

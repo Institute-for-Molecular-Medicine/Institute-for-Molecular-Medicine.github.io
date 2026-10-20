@@ -19,7 +19,7 @@
     <button class="menu-btn" type="button" aria-label="전체 메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
     <a class="logo" href="{{ '/' | relative_url }}">
       <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="" width="46" height="44">
-      <span class="logo-txt"><strong>{{ site.title }}</strong><em>{{ site.university }} {{ site.title_en }}</em></span>
+      <span class="logo-txt"><strong>{{ site.title }}</strong><em>{{ site.title_en_full }}</em></span>
     </a>
     <nav class="gnb" aria-label="주 메뉴">
       <ul>
@@ -47,7 +47,7 @@
       <p class="footer-name">{{ site.title }} <span>{{ site.title_en }}</span></p>
       <p>[{{ site.zipcode }}] {{ site.address }}</p>
       <p>TEL : {{ site.phone }} <span class="bar"></span> E-mail : <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-      <p class="copy"><a href="https://www.korea.ac.kr/ko/590/subview.do" target="_blank" rel="noopener"><strong>개인정보처리방침</strong></a><br>Copyright &copy; {{ site.time | date: "%Y" }} {{ site.university }} {{ site.title_en }}. All Rights Reserved.</p>
+      <p class="copy"><a href="https://www.korea.ac.kr/ko/590/subview.do" target="_blank" rel="noopener"><strong>개인정보처리방침</strong></a><br>Copyright &copy; {{ site.time | date: "%Y" }} {{ site.title_en_full }}. All Rights Reserved.</p>
     </div>
   </div>
 </footer>
