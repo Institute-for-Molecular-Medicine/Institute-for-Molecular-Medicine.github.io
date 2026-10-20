@@ -1,13 +1,19 @@
 fields:
-- title: 분자의학
-  en: Molecular Medicine
-  desc: 질병을 유발하는 분자 표적을 찾아내고 그 작용 기전을 연구하며, 이를 바탕으로 혁신적인 진단 방법과 치료법 개발에 집중하고 있습니다.
-- title: 분자면역
-  en: Molecular Immunology
-  desc: 면역 시스템을 조절하는 분자 표적을 발굴하고 그 기전을 연구하며, 면역 시스템을 활용하여 미충족 의료 수요 질환의 발병 기전을 밝히고 있습니다.
-- title: 분자영양
-  en: Molecular Nutrition
-  desc: 영양소의 소화, 흡수, 대사에 대한 분자 수준의 기초 연구를 수행하고, 대사 조절과 질환의 연관성을 연구합니다.
-- title: 중개연구
-  en: Translational Research
-  desc: 기초 연구를 통해 발견한 질병 표적에 대한 새로운 치료 방법을 개발하고, 이를 임상에 적용하기 위한 중개 연구를 추진하고 있습니다.
+- title: 분자의학 연구부
+  en: Division of Molecular Medicine
+  desc: 질병의 분자 수준 발병 기전을 규명하고, 맞춤형 정밀 의학과 분자 진단 기술을 연구 개발합니다.
+- title: 종양 생물학 연구부
+  en: Division of Tumor Biology
+  desc: 종양의 발생, 진행, 전이 기전과 종양 미세환경을 규명하고, 새로운 암 진단 및 치료 전략을 연구 개발합니다.
+- title: 면역학 연구부
+  en: Division of Immunology
+  desc: 암을 포함한 각종 면역 질환의 원인을 밝히고, 면역 조절 치료 기술을 연구 개발합니다.
+- title: 분자 생물학 연구부
+  en: Division of Molecular Biology
+  desc: 유전체, 전사체 등 생체 고분자의 구조와 기능, 유전자 발현 조절 메커니즘을 연구합니다.
+- title: 신약 개발 연구부
+  en: Division of Drug Development
+  desc: 분자 타깃 기반의 신약 후보 물질을 발굴하고, 효능 검증과 제형 개발 및 중개 연구 전반을 수행합니다.
+- title: 대사 생화학 연구부
+  en: Division of Metabolic Biochemistry
+  desc: 생체 분자의 대사 과정과 대사 관련 질환의 기전을 규명하고, 이에 대한 새로운 진단 및 치료법을 연구합니다.

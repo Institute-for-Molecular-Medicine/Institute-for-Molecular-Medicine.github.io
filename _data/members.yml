@@ -2,29 +2,29 @@ groups:
 - title: 연구소장
   people:
   - name: 박석인
-    degree: 이학박사
-    affiliation: 고려대학교 의과대학 생화학교실
+    degree: D.D.S., Ph.D.
 - title: 고문
   people:
   - name: 박길홍
-    degree: 의학박사
+    degree: M.D., Ph.D.
     affiliation: 명예교수
   - name: 손정원
-    degree: 의학박사
+    degree: M.D., Ph.D.
     affiliation: 명예교수
 - title: 참여교수
   people:
   - name: 박윤규
-    degree: 의학박사
+    degree: M.D., Ph.D.
   - name: 김명곤
-    degree: 의학박사
+    degree: M.D., Ph.D.
   - name: 이경미
-    degree: 이학박사
+    degree: Ph.D.
   - name: 김현경
-    degree: 이학박사
+    degree: Ph.D.
   - name: 남기훈
-    degree: 이학박사
+    degree: M.D., Ph.D.
   - name: 이남규
+    degree: Ph.D.
 - title: 겸임교수
   people:
   - name: Tae Kon Kim

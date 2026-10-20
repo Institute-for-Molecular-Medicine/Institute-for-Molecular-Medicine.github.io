@@ -314,3 +314,30 @@ ul,ol{list-style:none}
 .staff-list em{font-style:normal;font-size:13px;color:var(--muted)}
 .staff-empty{padding:0 12px 16px}
 @media (max-width:860px){.org-depts{grid-template-columns:1fr}}
+/* org chart v2 */
+.ochart{margin:10px 0 30px;text-align:center}
+.oc-box{display:flex;align-items:center;justify-content:center;border:1px solid var(--crimson);background:#fff;color:var(--ink);font-weight:600;font-size:15px;line-height:1.35;padding:12px 8px;min-height:62px;word-break:keep-all}
+.oc-head{display:flex;justify-content:center}
+.oc-dir{background:var(--crimson);color:#fff;font-size:17px;font-weight:700;min-width:180px;min-height:52px}
+.oc-stem{position:relative;width:2px;height:96px;background:#999;margin:0 auto}
+.oc-adv{position:absolute;left:2px;top:26px;display:flex;align-items:center}
+.oc-adv::before{content:"";display:block;width:70px;height:2px;background:#999}
+.oc-sub{min-width:140px;min-height:44px;padding:8px 16px;background:#faf5f6;color:var(--crimson)}
+.oc-depts{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));position:relative;padding-top:26px}
+.oc-depts::before{content:"";position:absolute;top:0;left:calc(100% / 12);right:calc(100% / 12);height:2px;background:#999}
+.oc-dept{position:relative;padding:0 5px}
+.oc-dept::before{content:"";position:absolute;top:-26px;left:50%;width:2px;height:26px;margin-left:-1px;background:#999}
+.oc-dept .oc-box{height:100%;background:#f6f6f6;border-color:#ddd;border-top:3px solid var(--crimson)}
+@media (max-width:860px){
+  .oc-depts{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 0;padding-top:20px}
+  .oc-depts::before,.oc-dept::before{display:none}
+  .oc-depts{border-top:2px solid #999}
+  .oc-adv::before{width:30px}
+  .oc-sub{min-width:100px}
+}
+/* uniform member cards */
+.people{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.person{min-height:124px}
+@media (max-width:860px){.people{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+/* research divisions */
+.field h4{font-size:20px}

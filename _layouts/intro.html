@@ -11,13 +11,13 @@ layout: sub
 <p class="purpose">{{ d.purpose | newline_to_br }}</p>
 
 <h4 id="org" class="h-bar">조직현황</h4>
-<div class="org">
-  <div class="org-top">연구소장</div>
-  <div class="org-line"></div>
-  <div class="org-side"><span>고문</span></div>
-  <div class="org-line"></div>
-  <div class="org-depts">
-    {% for x in d.departments %}<div class="dept"><strong>{{ x.name }}</strong><p>{{ x.desc | newline_to_br }}</p></div>
+<div class="ochart">
+  <div class="oc-head"><span class="oc-box oc-dir">연구소장</span></div>
+  <div class="oc-stem">
+    <div class="oc-adv"><span class="oc-box oc-sub">고문단</span></div>
+  </div>
+  <div class="oc-depts">
+    {% for x in site.data.research.fields %}<div class="oc-dept"><span class="oc-box">{{ x.title }}</span></div>
     {% endfor %}
   </div>
 </div>

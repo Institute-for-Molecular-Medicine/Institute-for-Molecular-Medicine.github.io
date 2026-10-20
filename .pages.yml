@@ -48,16 +48,6 @@ content:
     fields:
       - { name: lead, label: "소개 문장", type: text }
       - { name: purpose, label: "설립목적", type: text }
-      - name: departments
-        label: "조직 (연구부)"
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{name}"
-        fields:
-          - { name: name, label: "연구부 이름", type: string }
-          - { name: desc, label: "분장 내용", type: text }
       - name: rules
         label: "연구소 내규"
         type: object
@@ -80,17 +70,17 @@ content:
       - { name: name, label: "소장 이름", type: string }
 
   - name: page-research
-    label: "소개: 연구분야"
+    label: "소개: 연구분야 (연구부)"
     type: file
     path: _data/research.yml
     format: yaml
     fields:
       - name: fields
-        label: "연구분야"
+        label: "연구부"
         type: object
         list: true
         fields:
-          - { name: title, label: "분야명", type: string }
+          - { name: title, label: "연구부 이름", type: string, description: "여기 이름이 연구소 개요의 조직도에도 그대로 표시됩니다." }
           - { name: en, label: "영문명", type: string }
           - { name: desc, label: "설명", type: text }
 
