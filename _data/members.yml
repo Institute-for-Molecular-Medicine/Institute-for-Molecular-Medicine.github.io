@@ -1,48 +1,55 @@
 groups:
-- title: 연구소장
-  people:
-  - name: 박석인
-    degree: D.D.S., Ph.D.
-- title: 고문
-  people:
-  - name: 박길홍
-    degree: M.D., Ph.D.
-    affiliation: 명예교수
-  - name: 손정원
-    degree: M.D., Ph.D.
-    affiliation: 명예교수
-- title: 참여교수
-  people:
-  - name: 박윤규
-    degree: M.D., Ph.D.
-  - name: 김명곤
-    degree: M.D., Ph.D.
-  - name: 이경미
-    degree: Ph.D.
-  - name: 김현경
-    degree: Ph.D.
-  - name: 남기훈
-    degree: M.D., Ph.D.
-  - name: 이남규
-    degree: Ph.D.
-- title: 겸임교수
-  people:
-  - name: Tae Kon Kim
-    degree: M.D., Ph.D.
-    affiliation: Vanderbilt University Medical Center
-  - name: Kyung Jae Won
-    degree: Ph.D.
-    affiliation: Cedars Sinai Medical Center
-  - name: 양웅모
-    degree: 한의학박사
-    affiliation: 경희대학교 한의과대학
+  - title: 연구소장
+    people:
+      - name: 박석인
+        degree: D.D.S., Ph.D.
+        url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=203
+        photo: /assets/uploads/Park-Headshot 2022-07-1.jpg
+  - title: 고문
+    people:
+      - name: 박길홍
+        degree: M.D., Ph.D.
+        affiliation: 명예교수
+      - name: 손정원
+        degree: M.D., Ph.D.
+        affiliation: 명예교수
+  - title: 참여교수
+    people:
+      - name: 박윤규
+        degree: M.D., Ph.D.
+        url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=217
+      - name: 김명곤
+        degree: M.D., Ph.D.
+        url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=53
+      - name: 이경미
+        degree: Ph.D.
+        url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=395
+      - name: 김현경
+        degree: Ph.D.
+        url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=152
+      - name: 남기훈
+        degree: M.D., Ph.D.
+        url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=169
+      - name: 이남규
+        degree: Ph.D.
+        url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=2816
+  - title: 겸임교수
+    people:
+      - name: Tae Kon Kim
+        degree: M.D., Ph.D.
+        affiliation: Vanderbilt University Medical Center
+        url: https://medicine.vumc.org/department-directory/Tae-Kon-Kim
+      - name: Kyung Jae Won
+        degree: Ph.D.
+        affiliation: Cedars Sinai Medical Center
+        url: https://researchers.cedars-sinai.edu/KyoungJae.Won
+      - name: 양웅모
+        degree: 한의학박사
+        affiliation: 경희대학교 한의과대학 교수
+        url: http://www.wmyanglab.com
 staff:
-- label: 연구교수
-  count: '11'
-  people: []
-- label: 연구원
-  count: '6'
-  people: []
-- label: 직원
-  count: ''
-  people: []
+  - label: 연구교수
+    count: "11"
+  - label: 연구원
+    count: "6"
+  - label: 직원
