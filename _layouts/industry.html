@@ -8,7 +8,7 @@ layout: sub
   {% assign col = c.color | default: "#8b0029" %}
   <article class="company" style="--accent:{{ col }}">
     <header class="co-head">
-      <span class="co-mark" aria-hidden="true">{{ c.en | slice: 0 }}</span>
+      {% if c.logo and c.logo != "" %}<span class="co-mark co-logo" aria-hidden="true"><img src="{{ c.logo | relative_url }}" alt=""></span>{% else %}<span class="co-mark" aria-hidden="true">{{ c.en | slice: 0 }}</span>{% endif %}
       <div class="co-title">
         <h4>{{ c.name }} <span>{{ c.en }}</span></h4>
         {% if c.tagline and c.tagline != "" %}<p class="co-tag">{{ c.tagline }}</p>{% endif %}

@@ -4,7 +4,7 @@ companies:
   en: ShiftBio
   url: https://shiftbio.net
   color: '#009eb1'
-  tagline: 나노베지클 기반 세포·유전자 치료 플랫폼
+  tagline: Nanovesicle 세포·유전자 치료 플랫폼
   desc: 세포 유래 나노베지클(nanovesicle)을 활용한 차세대 세포·유전자 치료 기술을 개발합니다. 독자적인 나노베지클 분류 모티프(NSM) 기술로 치료 단백질을 베지클 표면에 효율적으로 제시하고 세포 안으로 전달하여, 그동안 표적하기 어려웠던 질환에 대한 새로운 치료 가능성을 열어 가고 있습니다.
   keywords:
   - Nanovesicle
@@ -12,6 +12,7 @@ companies:
   - NSM Platform
   person: 남기훈 교수
   role: 공동창업자 겸 CTO
+  logo: /assets/img/companies/shiftbio.png
 - name: 에이뮨링크
   en: AImmuneLink
   url: https://www.aimmunelink.com
@@ -24,3 +25,4 @@ companies:
   - Precision Immunology
   person: 박석인 교수
   role: 공동창업자 겸 CSO
+  logo: /assets/img/companies/aimmunelink.png

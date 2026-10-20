@@ -1,0 +1,30 @@
+# 산학 협력 기업 로고를 내려받는 1회용 작업입니다.
+name: Fetch company logos
+
+on: workflow_dispatch
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  logos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download logos
+        run: |
+          mkdir -p assets/img/companies
+          curl -fsSL --retry 3 https://cdn.imweb.me/thumbnail/20211005/f47c7f5492ca3.png -o assets/img/companies/shiftbio.png
+          curl -fsSL --retry 3 https://www.aimmunelink.com/upload/site_config/67d8c961c2c71.png -o assets/img/companies/aimmunelink.png
+          ls -la assets/img/companies
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/img/companies
+          git diff --cached --quiet || (git commit -m "산학 협력 기업 로고 추가" && git push)
+      - name: Rebuild site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main

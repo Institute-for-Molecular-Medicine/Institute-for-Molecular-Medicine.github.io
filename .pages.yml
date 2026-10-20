@@ -169,6 +169,7 @@ content:
           - { name: name, label: "기업명", type: string }
           - { name: en, label: "영문명", type: string, description: "첫 글자가 원 안의 표시로 쓰입니다." }
           - { name: url, label: "홈페이지 주소", type: string }
+          - { name: logo, label: "로고 (정사각형 권장)", type: image, description: "넣으면 원 안에 글자 대신 로고가 표시됩니다." }
           - { name: tagline, label: "한 줄 소개", type: string }
           - { name: desc, label: "회사 소개", type: text }
           - { name: keywords, label: "핵심 키워드", type: string, list: true }
