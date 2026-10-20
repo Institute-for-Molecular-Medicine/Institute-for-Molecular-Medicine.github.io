@@ -374,3 +374,6 @@ ul,ol{list-style:none}
 @media (max-width:860px){.companies{grid-template-columns:1fr}.company{padding:24px 20px 20px}}
 .co-logo{background:#fff!important;border:2px solid var(--accent);padding:7px;overflow:hidden}
 .co-logo img{width:100%;height:100%;object-fit:contain}
+
+/* names and degrees in black */
+.person .pname,.person span,.staff-list strong{color:var(--ink)}
