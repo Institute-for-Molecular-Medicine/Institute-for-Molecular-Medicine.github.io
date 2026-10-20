@@ -1,0 +1,36 @@
+# 기존 홈페이지(kimmn.co.kr)의 세미나 포스터를 저장소로 옮기는 1회용 작업입니다.
+# Actions 탭에서 "Run workflow" 로 한 번 실행하면 됩니다.
+name: Migrate old seminar posters
+
+on: workflow_dispatch
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download posters
+        run: |
+          mkdir -p assets/uploads/seminars
+          B=https://cdn.imweb.me/upload/S20231222181fd4a350b1a
+          for f in 252936bfd5750.png a97e48254f4d8.jpg 42b06c23db4ff.jpg aeae8c78c64cd.jpg 556dae268947f.jpg 44fd97a879155.jpg 7641767485030.jpg 86b143ec41ec4.jpg d07c9e7cc7fc5.jpg e4b6d4df66b8e.jpg 401a540338db4.jpg 316f51fbb7c85.jpg 385bdee0282d3.jpg a9e4616f21aa1.jpg fc38b2f41ee79.jpg 438a88178c734.png 3f2cadf2bea9d.jpg c0eba6f8c0f61.png 14246f8225e51.jpg 4b00f241c5e37.jpg 4a153d52f45b5.png 050032fc912cb.jpg 1ed1843d9cea3.jpg; do
+            curl -fsSL --retry 3 "$B/$f" -o "assets/uploads/seminars/$f" || echo "FAILED $f"
+          done
+          D=assets/uploads/seminars/abstract-ryu-dongryeol.docx
+          curl -fsSL --retry 3 "https://www.kimmn.co.kr/post_file_download.cm?c=YTo1OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyMzEyMjJhNDU4MjM0ODQyMDhjIjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjQxMTI2NzYzZDc0MjlmMzNmYSI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDI0MTEyNmMzODdlYzAwODgzNDciO3M6MTk6InBvc3RfZG93bmxvYWRfdG9rZW4iO3M6MzI6IjZhZDkzNmQzNzdiNWFiY2FjMmJkYzc2ZmQyNWNkZTU0IjtzOjExOiJtZW1iZXJfY29kZSI7Tjt9" -o "$D" || echo "FAILED docx"
+          if [ -f "$D" ] && ! unzip -tq "$D" >/dev/null 2>&1; then echo "docx invalid, removed"; rm -f "$D"; fi
+          ls -la assets/uploads/seminars
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/uploads/seminars
+          git diff --cached --quiet || (git commit -m "기존 홈페이지 세미나 포스터 이전" && git push)
+      - name: Rebuild site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main

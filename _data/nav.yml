@@ -13,7 +13,6 @@
   url: /research/publications/
   children:
     - { title: 연구논문, url: /research/publications/ }
-    - { title: 연구과제, url: /research/projects/ }
 - id: board
   title: 게시판
   url: /board/notice/

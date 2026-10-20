@@ -12,6 +12,7 @@ layout: sub
     </dl>
   </div>
   <div class="post-body">
+{% if page.poster %}<img class="poster" src="{{ page.poster | relative_url }}" alt="{{ page.title }} 포스터">{% endif %}
 {{ content }}
   </div>
   {% if page.attachment %}

@@ -1,0 +1,37 @@
+---
+layout: sub
+section: research
+title: 연구논문
+permalink: /research/publications/
+---
+{% assign pubs = site.data.publications %}
+<div class="pub-info">
+  <p>PubMed에서 <strong>고려대학교 의과대학 생화학분자생물학교실</strong> 소속 저자가 포함된 논문을 자동으로 검색한 목록입니다.{% if pubs %} {{ pubs.from_year }}년 이후 논문이며, 매주 자동으로 갱신됩니다. (최근 갱신 {{ pubs.updated }}){% endif %}</p>
+  <p class="note">굵은 글씨는 교실 소속 저자입니다.</p>
+</div>
+
+{% if pubs and pubs.count > 0 %}
+<div class="board-tools">
+  <p class="total">전체 <strong class="cnt">0</strong>편</p>
+  <form class="search" role="search" onsubmit="return false">
+    <label class="sr" for="q">검색어</label>
+    <input id="q" type="search" placeholder="제목, 저자, 저널 검색">
+    <button type="submit" class="btn">검색</button>
+  </form>
+</div>
+<ol class="pubs" data-paged="10">
+  {% for p in pubs.items %}
+  {% assign n = p.authors.size %}
+  <li>
+    <span class="pn">{{ forloop.index }}</span>
+    <p class="t"><a href="https://pubmed.ncbi.nlm.nih.gov/{{ p.pmid }}/" target="_blank" rel="noopener">{{ p.title }}</a></p>
+    <p class="a">{% for a in p.authors %}{% if n > 10 and forloop.index > 8 and forloop.last == false %}{% if forloop.index == 9 %}..., {% endif %}{% continue %}{% endif %}{% if a.m %}<b>{{ a.n }}</b>{% else %}{{ a.n }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+    <p class="j"><em>{{ p.journal }}</em>, {{ p.year }}{% if p.doi != "" %} <span class="bar"></span> <a href="https://doi.org/{{ p.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %} <span class="bar"></span> <a href="https://pubmed.ncbi.nlm.nih.gov/{{ p.pmid }}/" target="_blank" rel="noopener">PMID {{ p.pmid }}</a></p>
+  </li>
+  {% endfor %}
+</ol>
+<p class="board-empty" hidden>검색 결과가 없습니다.</p>
+<nav class="paging" aria-label="페이지"></nav>
+{% else %}
+<p class="board-empty">논문 목록을 준비 중입니다. <a href="https://pubmed.ncbi.nlm.nih.gov/?term=%22Korea+University%22%5BAffiliation%5D+AND+%22Department+of+Biochemistry+and+Molecular+Biology%22%5BAffiliation%5D&sort=date" target="_blank" rel="noopener">PubMed에서 바로 보기</a></p>
+{% endif %}

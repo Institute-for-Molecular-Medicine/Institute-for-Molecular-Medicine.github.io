@@ -39,11 +39,11 @@
     document.querySelector('.q-next').addEventListener('click', function () { move(1); });
   }
 
-  // 게시판 목록: 검색과 페이지 나누기
-  var table = document.querySelector('.board-table');
-  if (table) {
-    var per = parseInt(table.getAttribute('data-paged'), 10) || 10;
-    var rows = Array.prototype.slice.call(table.querySelectorAll('tbody tr'));
+  // 목록 페이지 나누기와 검색 (게시판, 논문 목록 공통)
+  var list = document.querySelector('[data-paged]');
+  if (list) {
+    var per = parseInt(list.getAttribute('data-paged'), 10) || 10;
+    var rows = Array.prototype.slice.call(list.tagName === 'TABLE' ? list.querySelectorAll('tbody tr') : list.children);
     var input = document.getElementById('q');
     var paging = document.querySelector('.paging');
     var cnt = document.querySelector('.cnt');
@@ -55,17 +55,23 @@
       if (page > pages) page = pages;
       rows.forEach(function (r) { r.style.display = 'none'; });
       filtered.slice((page - 1) * per, page * per).forEach(function (r) { r.style.display = ''; });
-      cnt.textContent = filtered.length;
-      empty.hidden = filtered.length > 0;
+      if (cnt) cnt.textContent = filtered.length;
+      if (empty) empty.hidden = filtered.length > 0;
+      if (!paging) return;
       paging.innerHTML = '';
       if (pages > 1) {
-        for (var i = 1; i <= pages; i++) {
+        var add = function (label, n, on) {
           var b = document.createElement('button');
-          b.type = 'button'; b.textContent = i;
-          if (i === page) b.className = 'on';
-          b.addEventListener('click', (function (n) { return function () { page = n; render(); }; })(i));
+          b.type = 'button'; b.textContent = label;
+          if (on) b.className = 'on';
+          b.addEventListener('click', function () { page = n; render(); window.scrollTo(0, list.getBoundingClientRect().top + window.pageYOffset - 140); });
           paging.appendChild(b);
-        }
+        };
+        var s = Math.max(1, page - 4), e = Math.min(pages, s + 9);
+        s = Math.max(1, e - 9);
+        if (page > 1) add('\u2039', page - 1, false);
+        for (var i = s; i <= e; i++) add(String(i), i, i === page);
+        if (page < pages) add('\u203a', page + 1, false);
       }
     };
     var search = function () {
@@ -73,8 +79,10 @@
       filtered = rows.filter(function (r) { return !q || r.textContent.toLowerCase().indexOf(q) > -1; });
       page = 1; render();
     };
-    input.addEventListener('input', search);
-    input.form.addEventListener('submit', search);
+    if (input) {
+      input.addEventListener('input', search);
+      if (input.form) input.form.addEventListener('submit', search);
+    }
     render();
   }
 })();
