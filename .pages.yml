@@ -152,7 +152,7 @@ content:
               - { name: note, label: "비고 (선택)", type: string, description: "예: 박석인 교수 연구실" }
 
   - name: page-industry
-    label: "연구업적: 산학 협력"
+    label: "연구업적: 산학협력"
     type: file
     path: _data/industry.yml
     format: yaml

@@ -76,13 +76,106 @@ groups:
 staff:
   - label: 연구강사 및 연구교수
     people:
+      - name: 전민솔, Ph.D.
+        note: 김현경 교수 연구실
+      - name: 조민경, Ph.D.
+        note: 남기훈 교수 연구실
       - name: 강아람, Ph.D.
         note: 박석인 교수 연구실
+      - name: 광장, Ph.D.
+        note: 남기훈 교수 연구실
+      - name: 김효빈, Ph.D.
+        note: 남기훈 교수 연구실
+      - name: 김성아, Ph.D.
+        note: 남기훈 교수 연구실
+      - name: 이정창, Ph.D.
+        note: 이경미 교수 연구실
       - name: 한아름, M.D., Ph.D.
         note: 박석인 교수 연구실
+      - name: Mike Lange, Ph.D.
+        note: 이남규 교수 연구실
+      - name: Judy Kim, Ph.D.
+        note: 이남규 교수 연구실
   - label: 연구원 및 연구조원
     people:
-      - {}
+      - name: 양은비
+        note: 김현경 교수 연구실
+      - name: 안원경
+        note: 남기훈 교수 연구실
+      - name: 서보연
+        note: 박석인 교수 연구실
+      - name: 신정우
+        note: 이경미 교수 연구실
+      - name: 이유경
+        note: 이경미 교수 연구실
+      - name: 백희지
+        note: 김현경 교수 연구실
+      - name: 김다은
+        note: 김현경 교수 연구실
+      - name: 박예진
+        note: 이경미 교수 연구실
+      - name: 이혜민
+        note: 이경미 교수 연구실
+      - name: 권민정
+        note: 남기훈 교수 연구실
+      - name: 신동우
+        note: 남기훈 교수 연구실
+      - name: 심윤지
+        note: 이경미 교수 연구실
+      - name: 오세영
+        note: 이경미 교수 연구실
+      - name: 정예원
+        note: 남기훈 교수 연구실
+      - name: 김예은
+        note: 김현경 교수 연구실
+      - name: 김지혜
+        note: 박석인 교수 연구실
+      - name: 김요한
+        note: 이경미 교수 연구실
+      - name: 신지우
+        note: 박석인 교수 연구실
+      - name: 김채영
+        note: 이경미 교수 연구실
+      - name: 최준혁
+        note: 김현경 교수 연구실
+      - name: 김대현
+        note: 김현경 교수 연구실
+      - name: 김지영
+        note: 김현경 교수 연구실
+      - name: 이상욱
+        note: 남기훈 교수 연구실
+      - name: 변희진
+        note: 남기훈 교수 연구실
+      - name: 온지수
+        note: 남기훈 교수 연구실
+      - name: 장효진
+        note: 이경미 교수 연구실
+      - name: 송미향
+        note: 박석인 교수 연구실
+      - name: 권신영
+        note: 남기훈 교수 연구실
+      - name: 김보민
+        note: 박석인 교수 연구실
+      - name: 이예지
+        note: 남기훈 교수 연구실
+      - name: 김민석
+        note: 이남규 교수 연구실
+      - name: 김현석
+        note: 이남규 교수 연구실
+      - name: 명슬기
+        note: 남기훈 교수 연구실
+      - name: 안이현
+        note: 이남규 교수 연구실
+      - name: 유인환
+        note: 이남규 교수 연구실
+      - name: 이주미
+        note: 이남규 교수 연구실
+      - name: 정영규
+        note: 박윤규 교수 연구실
+      - name: 오혜진
+        note: 김명곤 교수 연구실
+      - name: 양경훈
+        note: 이경미 교수 연구실
   - label: 직원
     people:
       - name: 유영빈

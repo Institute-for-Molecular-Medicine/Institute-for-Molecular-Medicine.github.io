@@ -1,6 +1,6 @@
 ---
 layout: industry
 section: research
-title: 산학 협력
+title: 산학협력
 permalink: /research/industry/
 ---
