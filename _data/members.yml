@@ -13,7 +13,7 @@ groups:
       - name: 손정원
         degree: M.D., Ph.D.
         affiliation: 고려대학교 명예교수
-  - title: 참여교수
+  - title: 참여교수- 생화학분자생물학교실
     people:
       - name: 박윤규
         degree: M.D., Ph.D.
@@ -39,7 +39,7 @@ groups:
         degree: Ph.D.
         affiliation: 생화학분자생물학교실
         url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=2816
-  - title: KU Medicine 참여교수
+  - title: 참여교수- KU Medicine
     people:
       - name: 정승필
         degree: M.D., Ph.D.
@@ -69,7 +69,7 @@ groups:
       - name: 이준호
         degree: M.D., Ph.D.
         affiliation: 안암병원 흉부외과
-  - title: 겸임교수
+  - title: 참여교수- 외부
     people:
       - name: Tae Kon Kim
         degree: M.D., Ph.D.
