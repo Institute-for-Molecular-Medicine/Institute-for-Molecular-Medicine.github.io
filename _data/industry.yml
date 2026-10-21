@@ -1,17 +1,17 @@
 intro: 연구소 교수진의 연구를 바탕으로 설립된 기업들과 함께 기초 연구의 성과를 실제 진단과 치료 기술로 연결하고 있습니다.
 companies:
 - name: 시프트바이오
-  en: ShiftBio
+  en: SHIFTBIO
   url: https://shiftbio.net
   color: '#009eb1'
-  tagline: Nanovesicle 세포·유전자 치료 플랫폼
-  desc: 세포 유래 나노베지클(nanovesicle)을 활용한 차세대 세포·유전자 치료 기술을 개발합니다. 독자적인 나노베지클 분류 모티프(NSM) 기술로 치료 단백질을 베지클 표면에 효율적으로 제시하고 세포 안으로 전달하여, 그동안 표적하기 어려웠던 질환에 대한 새로운 치료 가능성을 열어 가고 있습니다.
+  tagline: "세포 유래 나노입자 기반 표적 약물전달 플랫폼"
+  desc: "시프트바이오는 세포 유래 나노입자(Natural Nanoparticles, NNP)를 활용한 약물전달 플랫폼을 개발합니다. 독자적인 NSM 기술과 약물 탑재 기술을 바탕으로 단백질·핵산·저분자화합물 등 다양한 치료 물질을 나노입자 표면이나 내부에 탑재하고, 표적 조직과 세포로 전달하도록 설계합니다. 이를 기반으로 염증성 질환과 뇌질환 등에 적용할 치료제를 개발하고 있습니다."
   keywords:
-  - Nanovesicle
-  - Cell & Gene Therapy
+  - Natural Nanoparticles (NNP)
+  - Targeted Drug Delivery
   - NSM Platform
   person: 남기훈 교수
-  role: 공동창업자 겸 CTO
+  role: 공동창업자 겸 대표이사(CEO)
   logo: /assets/img/companies/shiftbio.png
 - name: 에이뮨링크
   en: AImmuneLink
