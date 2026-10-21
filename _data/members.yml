@@ -59,6 +59,9 @@ groups:
       - name: 박진우
         degree: M.D., Ph.D.
         affiliation: 안암병원 신경과
+      - name: 이준호
+        degree: M.D., Ph.D.
+        affiliation: 안암병원 흉부외과
   - title: 겸임교수
     people:
       - name: Tae Kon Kim
