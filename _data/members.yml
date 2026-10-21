@@ -41,6 +41,13 @@ groups:
         url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=2816
   - title: KU Medicine 참여교수
     people:
+      - name: 정승필
+        degree: M.D., Ph.D.
+        affiliation: 안암병원 유방내분비외과
+      - name: 사경하
+        degree: Ph.D.
+        affiliation: 의과대학 의료정보학교실
+        url: https://salab.korea.ac.kr/home
       - name: 최광언
         degree: M.D., Ph.D.
         affiliation: 구로병원 안과
