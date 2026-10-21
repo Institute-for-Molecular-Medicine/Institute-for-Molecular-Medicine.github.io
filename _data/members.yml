@@ -3,35 +3,62 @@ groups:
     people:
       - name: 박석인
         degree: D.D.S., Ph.D.
+        affiliation: 생화학분자생물학교실
         url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=203
   - title: 고문
     people:
       - name: 박길홍
         degree: M.D., Ph.D.
-        affiliation: 명예교수
+        affiliation: 고려대학교 명예교수
       - name: 손정원
         degree: M.D., Ph.D.
-        affiliation: 명예교수
+        affiliation: 고려대학교 명예교수
   - title: 참여교수
     people:
       - name: 박윤규
         degree: M.D., Ph.D.
+        affiliation: 생화학분자생물학교실
         url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=217
       - name: 김명곤
         degree: M.D., Ph.D.
+        affiliation: 생화학분자생물학교실
         url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=53
       - name: 이경미
         degree: Ph.D.
+        affiliation: 생화학분자생물학교실
         url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=395
       - name: 김현경
         degree: Ph.D.
+        affiliation: 생화학분자생물학교실
         url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=152
       - name: 남기훈
         degree: M.D., Ph.D.
+        affiliation: 생화학분자생물학교실
         url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=169
       - name: 이남규
         degree: Ph.D.
+        affiliation: 생화학분자생물학교실
         url: https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=2816
+  - title: KU Medicine 참여교수
+    people:
+      - name: 최광언
+        degree: M.D., Ph.D.
+        affiliation: 구로병원 안과
+      - name: 조동혁
+        degree: M.D., Ph.D.
+        affiliation: 안암병원 순환기내과
+      - name: 이영선
+        degree: M.D., Ph.D.
+        affiliation: 구로병원 소화기내과
+      - name: 최유진
+        degree: M.D., Ph.D.
+        affiliation: 안암병원 간담췌외과
+      - name: 김종헌
+        degree: M.D., Ph.D.
+        affiliation: 안산병원 신경과
+      - name: 박진우
+        degree: M.D., Ph.D.
+        affiliation: 안암병원 신경과
   - title: 겸임교수
     people:
       - name: Tae Kon Kim
