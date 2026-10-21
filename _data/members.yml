@@ -76,8 +76,6 @@ groups:
 staff:
   - label: 연구강사 및 연구교수
     people:
-      - name: 전민솔, Ph.D.
-        note: 김현경 교수 연구실
       - name: 조민경, Ph.D.
         note: 남기훈 교수 연구실
       - name: 강아람, Ph.D.
@@ -94,87 +92,128 @@ staff:
         note: 박석인 교수 연구실
       - name: Mike Lange, Ph.D.
         note: 이남규 교수 연구실
+      - name: 전민솔, Ph.D.
+        note: 김현경 교수 연구실
       - name: Judy Kim, Ph.D.
         note: 이남규 교수 연구실
   - label: 연구원 및 연구조원
     people:
       - name: 양은비
+        role: 박사과정
         note: 김현경 교수 연구실
       - name: 안원경
+        role: 박사과정
         note: 남기훈 교수 연구실
       - name: 서보연
+        role: 박사과정
         note: 박석인 교수 연구실
       - name: 신정우
+        role: 박사과정
         note: 이경미 교수 연구실
       - name: 이유경
+        role: 박사과정
         note: 이경미 교수 연구실
       - name: 백희지
+        role: 석박통합과정
         note: 김현경 교수 연구실
       - name: 김다은
+        role: 석박통합과정
         note: 김현경 교수 연구실
       - name: 박예진
+        role: 석박통합과정
         note: 이경미 교수 연구실
       - name: 이혜민
+        role: 석박통합과정
         note: 이경미 교수 연구실
       - name: 권민정
+        role: 석박통합과정
         note: 남기훈 교수 연구실
       - name: 신동우
+        role: 석박통합과정
         note: 남기훈 교수 연구실
       - name: 심윤지
+        role: 석박통합과정
         note: 이경미 교수 연구실
       - name: 오세영
+        role: 석박통합과정
         note: 이경미 교수 연구실
       - name: 정예원
+        role: 석박통합과정
         note: 남기훈 교수 연구실
       - name: 김예은
+        role: 석박통합과정
         note: 김현경 교수 연구실
       - name: 김지혜
+        role: 석박통합과정
         note: 박석인 교수 연구실
       - name: 김요한
+        role: 석박통합과정
         note: 이경미 교수 연구실
       - name: 신지우
+        role: 석박통합과정
         note: 박석인 교수 연구실
       - name: 김채영
+        role: 석박통합과정
         note: 이경미 교수 연구실
       - name: 최준혁
+        role: 석박통합과정
         note: 김현경 교수 연구실
       - name: 김대현
+        role: 석박통합과정
         note: 김현경 교수 연구실
       - name: 김지영
+        role: 석박통합과정
         note: 김현경 교수 연구실
       - name: 이상욱
+        role: 석사과정
         note: 남기훈 교수 연구실
       - name: 변희진
+        role: 연구원
         note: 남기훈 교수 연구실
       - name: 온지수
+        role: 연구원
         note: 남기훈 교수 연구실
       - name: 장효진
+        role: 연구원
         note: 이경미 교수 연구실
       - name: 송미향
+        role: 연구원
         note: 박석인 교수 연구실
       - name: 권신영
+        role: 연구원
         note: 남기훈 교수 연구실
       - name: 김보민
+        role: 연구원
         note: 박석인 교수 연구실
       - name: 이예지
+        role: 연구원
         note: 남기훈 교수 연구실
       - name: 김민석
+        role: 연구원
         note: 이남규 교수 연구실
       - name: 김현석
+        role: 연구원
         note: 이남규 교수 연구실
       - name: 명슬기
+        role: 연구원
         note: 남기훈 교수 연구실
       - name: 안이현
+        role: 연구원
         note: 이남규 교수 연구실
       - name: 유인환
+        role: 연구원
         note: 이남규 교수 연구실
       - name: 이주미
+        role: 연구원
         note: 이남규 교수 연구실
       - name: 정영규
+        role: 조교
         note: 박윤규 교수 연구실
       - name: 오혜진
+        role: 조교
         note: 김명곤 교수 연구실
       - name: 양경훈
+        role: 조교
         note: 이경미 교수 연구실
   - label: 직원
     people:

@@ -377,3 +377,5 @@ ul,ol{list-style:none}
 
 /* names and degrees in black */
 .person .pname,.person span,.staff-list strong{color:var(--ink)}
+.staff-list .srole{display:block;font-size:13px;color:var(--ink);margin:2px 0 1px}
+.staff-list em{display:block}

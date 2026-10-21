@@ -149,6 +149,7 @@ content:
             list: true
             fields:
               - { name: name, label: "이름", type: string }
+              - { name: role, label: "과정 또는 직위 (선택)", type: string, description: "예: 박사과정, 석박통합과정, 연구원, 조교" }
               - { name: note, label: "비고 (선택)", type: string, description: "예: 박석인 교수 연구실" }
 
   - name: page-industry

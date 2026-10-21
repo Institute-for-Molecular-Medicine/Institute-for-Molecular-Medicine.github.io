@@ -20,7 +20,7 @@ layout: sub
     <summary><span class="sl">{{ s.label }}</span><span class="sc"><b>{{ cnt }}</b>명</span><span class="sa">명단 보기</span></summary>
     {% if n > 0 %}
     <ul class="staff-list">
-      {% for p in s.people %}<li><strong>{{ p.name }}</strong>{% if p.note and p.note != "" %}<em>{{ p.note }}</em>{% endif %}</li>
+      {% for p in s.people %}<li><strong>{{ p.name }}</strong>{% if p.role and p.role != "" %}<span class="srole">{{ p.role }}</span>{% endif %}{% if p.note and p.note != "" %}<em>{{ p.note }}</em>{% endif %}</li>
       {% endfor %}
     </ul>
     {% else %}
