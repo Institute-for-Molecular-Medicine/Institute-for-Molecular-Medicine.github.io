@@ -228,4 +228,5 @@ staff:
   - label: 직원
     people:
       - name: 유영빈
-        note: 주임 실험기사
+        role: "주임 실험기사 "
+        note: 교직원
