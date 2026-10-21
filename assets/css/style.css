@@ -379,3 +379,4 @@ ul,ol{list-style:none}
 .person .pname,.person span,.staff-list strong{color:var(--ink)}
 .staff-list .srole{display:block;font-size:13px;color:var(--ink);margin:2px 0 1px}
 .staff-list em{display:block}
+.oc-adv.oc-left{left:auto;right:2px;flex-direction:row-reverse}
