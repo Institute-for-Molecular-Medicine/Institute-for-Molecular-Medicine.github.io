@@ -10,11 +10,11 @@ zipcode: "02841"
 phone: 02-2286-1181
 email: yyb77@korea.ac.kr
 
-# 시안 단계: 검색엔진 노출 차단. 정식 공개할 때 false 로 바꾸세요
-noindex: true
+# 검색엔진 노출 차단 여부 (true 이면 차단)
+noindex: false
 
-# 도메인 연결 전에는 비워 둡니다
-url: ""
+# 정식 도메인
+url: "https://imm.korea.ac.kr"
 baseurl: ""
 
 lang: ko
