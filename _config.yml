@@ -17,6 +17,9 @@ noindex: false
 url: "https://imm.korea.ac.kr"
 baseurl: ""
 
+# 미래 날짜 글(행사 공지 등)도 바로 게시
+future: true
+
 lang: ko
 timezone: Asia/Seoul
 markdown: kramdown

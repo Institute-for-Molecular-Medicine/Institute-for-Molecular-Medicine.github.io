@@ -12,11 +12,11 @@ layout: sub
     </dl>
   </div>
   <div class="post-body">
-{% if page.poster %}<img class="poster" src="{{ page.poster | relative_url }}" alt="{{ page.title }} 포스터">{% endif %}
+{% if page.poster %}<img class="poster" src="{{ site.baseurl }}{{ page.poster }}" alt="{{ page.title }} 포스터">{% endif %}
 {{ content }}
   </div>
   {% if page.attachment %}
-  <p class="post-file">첨부파일 <a href="{{ page.attachment | relative_url }}" download>{{ page.attachment | split: "/" | last }}</a></p>
+  <p class="post-file">첨부파일 <a href="{{ site.baseurl }}{{ page.attachment }}" download>{{ page.attachment | split: "/" | last }}</a></p>
   {% endif %}
   <div class="post-foot">
     <a class="btn" href="{{ '/board/' | append: page.board | append: '/' | relative_url }}">목록</a>
